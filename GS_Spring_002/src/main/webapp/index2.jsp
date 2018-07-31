@@ -5,6 +5,6 @@
 </head>
 <body>
       <%--<% response.sendRedirect("/users"); %>--%>
-<a href="/users.html">Go </a>
+<a href="/users.html">Go! </a>
 </body>
 </html>
