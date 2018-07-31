@@ -25,11 +25,11 @@ public class UserValidator implements Validator {
         User user = (User) o;
 
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "", "User name is required");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "", "User email is required");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "301", "User name is required");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "302", "User email is required");
 
         if (!isValidEmail(user.getEmail()) && errors.getErrorCount() < 1) {
-            errors.rejectValue("email", "", "Invalid email address");
+            errors.rejectValue("email", "303", "Invalid email address");
             return;
         }
 

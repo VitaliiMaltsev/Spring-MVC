@@ -63,7 +63,7 @@ public class ProjectsController {
         }
         return "redirect:/projects";
     }
-
+// @ModelAttribute в этом методе создает и вытаскиевает готовый объект project
     @RequestMapping(method = RequestMethod.POST)
     public String add(@ModelAttribute("project") Project project, BindingResult result) {
         projectValidator.validate(project, result);

@@ -18,7 +18,7 @@
 </table>
 <br>
 
-<form:form commandName="user" method="POST" action="/adduser" >
+<form:form commandName="user" method="POST" action="adduser" >
     <form:hidden path="userId"/>
 
     <table>

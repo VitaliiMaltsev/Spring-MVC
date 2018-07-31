@@ -23,7 +23,7 @@ public class ProjectValidator implements Validator {
     }
 
     public void validate(Object o, Errors errors) {
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "", "Project name is required");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "1245", "Project name is required");
     }
 
 

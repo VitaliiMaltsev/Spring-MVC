@@ -25,9 +25,9 @@ public class TaskValidator implements Validator {
         Task task = (Task)o;
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "", "Task name is required");
         if (task.getProject() == null)
-            errors.rejectValue("project", "", "Task project is required, choose s project");
+            errors.rejectValue("project", "201", "Task project is required, choose s project");
         if (task.getUsers() == null || task.getUsers().size() < 1)
-            errors.rejectValue("users", "", "Task users is required, choose at least one");
+            errors.rejectValue("users", "202", "Task users is required, choose at least one");
 
     }
 
