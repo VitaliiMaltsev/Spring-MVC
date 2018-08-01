@@ -50,7 +50,7 @@ public class TasksController {
 
 
     @ModelAttribute("tasks")
-    public List<Project> getAllTasks() {
+    public List<Task> getAllTasks() {
         return taskDao.findAll();
     }
 

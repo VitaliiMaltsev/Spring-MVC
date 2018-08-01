@@ -8,7 +8,8 @@
     <c:forEach items="${projects}" var="p">
         <tr>
             <td><c:out value="${p.name}"/></td>
-            <td><a href="projects/edit/${p.projectId}">Edit</a>&nbsp;<a href="projects/delete/${p.projectId}">Delete</a></td>
+            <td><a href="http://localhost:8080/mvc5/projects/edit/${p.projectId}">Edit</a>&nbsp;
+                <a href="http://localhost:8080/mvc5/projects/delete/${p.projectId}">Delete</a></td>
 
         </tr>
     </c:forEach>

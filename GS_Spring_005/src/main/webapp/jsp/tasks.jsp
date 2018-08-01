@@ -7,16 +7,17 @@
         <td>Users</td>
         <td>Actions</td>
     </tr>
-    <c:forEach items="${tasks}" var="t">
+    <c:forEach items="${tasks}" var="task">
         <tr>
-            <td><c:out value="${t.name}"/></td>
-            <td><c:out value="${t.project.name}"/></td>
+            <td><c:out value="${task.name}"/></td>
+            <td><c:out value="${task.project.name}"/></td>
             <td>
-                <c:forEach var="u" items="${t.users}">
-                   <c:out value="${u.name}"/>&nbsp; 
+                <c:forEach var="u" items="${task.users}">
+                   <c:out value="${u.name}"/>&nbsp;
                 </c:forEach>
             </td>
-            <td><a href="tasks/edit/${t.taskId}">Edit</a>&nbsp;<a href="tasks/delete/${t.taskId}">Delete</a></td>
+            <td><a href="http://localhost:8080/mvc5/tasks/edit/${task.taskId}">Edit</a>&nbsp;
+                <a href="http://localhost:8080/mvc5/tasks/delete/${task.taskId}">Delete</a></td>
 
         </tr>
     </c:forEach>

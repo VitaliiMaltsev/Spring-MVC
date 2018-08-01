@@ -11,7 +11,8 @@
             <td><c:out value="${u.name}"/></td>
             <td><c:out value="${u.email}"/></td>
             
-            <td><a href="users/edit/${u.userId}">Edit</a>&nbsp;<a href="users/delete/${u.userId}">Delete</a></td>
+            <td><a href="http://localhost:8080/mvc5/users/edit/${u.userId}">Edit</a>&nbsp;
+                <a href="http://localhost:8080/mvc5/users/delete/${u.userId}">Delete</a></td>
 
         </tr>
     </c:forEach>
